@@ -21,7 +21,8 @@ The system is divided into layers. Lower layers do not know about higher layers.
 /src
     /api            # the api layer contains route defitions and maps REST commands to domain function calls
     /domain         # The domain layer contains all domain functions and objects and knows nothing about the api layer
-    /infrastructure # The infrastructure layer contains system functions and objects that coordinate persistence and other infrastrucutre activities. Data models live here.
+    /infrastructure # The infrastructure layer contains system functions and objects that 
+                    # coordinate persistence and other infrastrucutre activities. Data models live here.
 ```
 
 ### Modules in a DDD system
