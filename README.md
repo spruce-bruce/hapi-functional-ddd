@@ -27,7 +27,7 @@ The system is divided into layers. Lower layers do not know about higher layers.
 ```
 
 ### Modules in a DDD system
-DDD defines a module as a group of related domain objects and functions. Modules define strict interfaces that must not be broken. In this example I express modules in the code with this directory structure:
+DDD defines a module as a group of related domain objects and functions. The Domain Model defines strict interfaces between modules that must not be broken. In this example I express modules in the code with this directory structure:
 
 ```
 /src
