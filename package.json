@@ -6,6 +6,7 @@
   "license": "MIT",
   "scripts": {
     "start": "nodemon index.js",
+    "knex": "knex --knexfile database/knexfile.js",
     "test": "lab --sourcemaps --transform node_modules/lab-transform-typescript src/api/test",
     "test:unit": "lab test/unit",
     "test:integration": "lab test/integration",
