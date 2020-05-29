@@ -7,11 +7,8 @@
   "scripts": {
     "start": "nodemon index.js",
     "knex": "knex --knexfile database/knexfile.js",
-    "test": "lab --sourcemaps --transform node_modules/lab-transform-typescript src/api/test",
-    "test:unit": "lab test/unit",
-    "test:integration": "lab test/integration",
-    "test:watch": "nodemon -x lab",
-    "test:watch:api": "nodemon -x lab --sourcemaps --transform node_modules/lab-transform-typescript src/api/test"
+    "test": "lab -v --sourcemaps --transform node_modules/lab-transform-typescript src/api/test",
+    "test:watch": "nodemon -x lab --sourcemaps --transform node_modules/lab-transform-typescript src/api/test"
   },
   "dependencies": {
     "@hapi/hapi": "^19.1.1",
