@@ -1,0 +1,37 @@
+{
+  "name": "layering-poc",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "spruce-bruce <aaron@synapsestudios.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "lab --sourcemaps --transform node_modules/lab-transform-typescript src/api/test",
+    "test:unit": "lab test/unit",
+    "test:integration": "lab test/integration",
+    "test:watch": "nodemon -x lab",
+    "test:watch:api": "nodemon -x lab --sourcemaps --transform node_modules/lab-transform-typescript src/api/test"
+  },
+  "dependencies": {
+    "@hapi/hapi": "^19.1.1",
+    "@hapi/inert": "^6.0.1",
+    "@hapi/joi": "^17.1.1",
+    "@hapi/vision": "^6.0.0",
+    "hapi-swagger": "^13.0.1",
+    "haute-couture": "^3.5.0",
+    "js-data": "3.0.2",
+    "js-data-sql": "^1.0.1",
+    "pg": "^8.2.1",
+    "ramda": "^0.27.0",
+    "uuid": "^8.1.0"
+  },
+  "devDependencies": {
+    "@hapi/code": "^8.0.1",
+    "@hapi/lab": "^22.0.4",
+    "@types/hapi": "^18.0.3",
+    "@types/node": "^14.0.5",
+    "lab-transform-typescript": "^3.0.1",
+    "nodemon": "^2.0.4",
+    "typescript": "^3.9.3"
+  }
+}
