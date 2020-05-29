@@ -20,3 +20,6 @@ The system is divided into layers. Lower layers do not know about higher layers.
 
 ## Functional Programming
 The functional paradigm aggressively promotes pure functions and loose coupling. By using functional patterns and adopting values from this community we can build applications that are easy to maintain.
+
+## Typescript
+The value of having types is well discussed and argued in the world of computer science, but the expressiveness of types has an additional benefit in a DDD environment. Being able to declare that a function requires a PurchaseOrder as an argument or a RiskAssessment object has extreme communicative value in a model and in the code that implements that model.
