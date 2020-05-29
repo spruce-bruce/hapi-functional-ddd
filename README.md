@@ -12,6 +12,9 @@ $ yarn knex migrate:latest
 $ yarn test
 ```
 
+## Shortcut
+If you want to dive into the code start here: https://github.com/spruce-bruce/hapi-functional-ddd/blob/master/src/api/product/routes/product-save.js
+
 ## Domain Driven Design
 Domain Driven Design (DDD) is the practice of strictly maintaining a domain model that is implemented literally in code. In order to be able to accomplish this goal the code must be expressable as a model that can be understood by non-programmers, and in a complex domain this necessitates simple expressive system designs that are loosely coupled. And, because simple designs that are loosely coupled are also easiest to maintain the DDD process adds great value to a project.
 
