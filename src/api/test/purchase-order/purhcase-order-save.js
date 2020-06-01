@@ -5,10 +5,10 @@ const { init, register, createServer } = require('../../../../lib/server');
 const { v4 } = require('uuid');
 
 describe('Routes', () => {
-  describe('product-save', () => {
+  describe('purcase-order-save', () => {
     let server;
     before(async () => {
-      server = createServer();
+      server = createServer()
       await register(server);
     });
 
@@ -23,8 +23,7 @@ describe('Routes', () => {
     it('responds with 200', async () => {
       const res = await server.inject({
         method: 'put',
-        url: '/products',
-        payload: { id: v4(), name: 'A name' }
+        url: '/purchase-orders',
       });
       expect(res.statusCode).to.equal(200);
     });
@@ -33,14 +32,12 @@ describe('Routes', () => {
       const productResource = { id: v4(), name: 'A name' };
       const res1 = await server.inject({
         method: 'put',
-        url: '/products',
-        payload: productResource,
+        url: '/purchase-orders',
       });
 
       const res2 = await server.inject({
         method: 'put',
-        url: '/products',
-        payload: productResource,
+        url: '/purchase-orders',
       });
 
       expect(res1.statusCode).to.equal(res2.statusCode);
@@ -49,8 +46,7 @@ describe('Routes', () => {
     it('put responds with 400', async () => {
       const res = await server.inject({
         method: 'put',
-        url: '/products',
-        payload: { id: v4(), something: 'fake' }
+        url: '/purchase-orders',
       });
       expect(res.statusCode).to.equal(400);
     });

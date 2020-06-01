@@ -8,7 +8,7 @@
     "start": "nodemon index.js",
     "knex": "knex --knexfile database/knexfile.js",
     "test": "lab -v --sourcemaps --transform node_modules/lab-transform-typescript src/api/test",
-    "test:watch": "nodemon -x lab --sourcemaps --transform node_modules/lab-transform-typescript src/api/test"
+    "test:watch": "nodemon -e js,ts -x lab --sourcemaps --transform node_modules/lab-transform-typescript src/api/test"
   },
   "dependencies": {
     "@hapi/hapi": "^19.1.1",
@@ -27,7 +27,9 @@
     "@hapi/code": "^8.0.1",
     "@hapi/lab": "^22.0.4",
     "@types/hapi": "^18.0.3",
+    "@types/hapi__joi": "^17.1.0",
     "@types/node": "^14.0.5",
+    "@types/uuid": "^8.0.0",
     "lab-transform-typescript": "^3.0.1",
     "nodemon": "^2.0.4",
     "typescript": "^3.9.3"
