@@ -13,7 +13,7 @@ module.exports = {
     validate: {
       payload: Joi.object({
         id: Joi.string().guid().required(),
-        name: Joi.string()
+        PONumber: Joi.string()
       }),
     }
   }
