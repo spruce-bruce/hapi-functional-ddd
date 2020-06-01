@@ -1,14 +1,18 @@
 const Joi = require('@hapi/joi');
 const { createProduct, persistProduct } = require('../../../domain/product');
+const liftP = require('../../../utility/liftP');
+const { composeP } = require('ramda');
+
+const mapProductToResource = product => ({ product });
 
 module.exports = {
   method: 'put',
   path: '/products',
-  handler: async (request) => {
-    const product = createProduct(request.payload);
-    await persistProduct(product);
-    return { product };
-  },
+  handler: async (request) => composeP(
+    liftP(mapProductToResource),
+    persistProduct,
+    liftP(createProduct)
+  )(request.payload),
   options: {
     tags: ['api'],
     description: 'Save a complete or partial product',

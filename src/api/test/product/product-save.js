@@ -21,12 +21,14 @@ describe('Routes', () => {
     });
 
     it('responds with 200', async () => {
+      const payload = { id: v4(), name: 'A name' };
       const res = await server.inject({
         method: 'put',
         url: '/products',
-        payload: { id: v4(), name: 'A name' }
+        payload,
       });
       expect(res.statusCode).to.equal(200);
+      expect(JSON.parse(res.payload)).to.equal({ product: payload });
     });
 
     it('put is idempotent', async () => {
