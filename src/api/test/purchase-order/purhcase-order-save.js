@@ -21,11 +21,15 @@ describe('Routes', () => {
     });
 
     it('responds with 200', async () => {
+      const payload = { id: v4(), PONumber: v4() };
       const res = await server.inject({
         method: 'put',
         url: '/purchase-orders',
+        payload
       });
+
       expect(res.statusCode).to.equal(200);
+      expect(JSON.parse(res.payload)).to.equal(payload);
     });
 
     it('put is idempotent', async () => {

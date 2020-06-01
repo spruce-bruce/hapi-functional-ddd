@@ -14,4 +14,4 @@ const createPurchaseOrder = ({ id, PONumber} : Omit<PurchaseOrder, 'toString'>) 
   toString: () => JSON.stringify({ id, PONumber })
 });
 
-module.exports = createPurchaseOrder;
+export default createPurchaseOrder;

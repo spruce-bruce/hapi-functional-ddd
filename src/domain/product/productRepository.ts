@@ -11,8 +11,8 @@ exports.get = async (productId: string) => {
 const mapProductToDb = ({ toString, ...product } : Product) => Promise.resolve(product);
 const persistProduct = persist('products');
 
-exports.add = (product: Product) : Product => {
-  composeP(
+exports.add = async (product: Product) : Promise<Product> => {
+  await composeP(
     persistProduct( savableProduct  => exports.get(savableProduct.id).then((product: Product) => !!product) ),
     mapProductToDb
   )(product);
