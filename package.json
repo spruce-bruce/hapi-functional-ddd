@@ -7,6 +7,7 @@
   "scripts": {
     "start": "nodemon index.js",
     "knex": "knex --knexfile database/knexfile.js",
+    "lint": "eslint '*/**/*.{js,ts}'",
     "test": "lab -v --sourcemaps --transform node_modules/lab-transform-typescript src/api/test",
     "test:watch": "nodemon -e js,ts -x lab --sourcemaps --transform node_modules/lab-transform-typescript src/api/test"
   },
@@ -31,6 +32,9 @@
     "@types/node": "^14.0.5",
     "@types/ramda": "^0.27.6",
     "@types/uuid": "^8.0.0",
+    "@typescript-eslint/eslint-plugin": "^3.1.0",
+    "@typescript-eslint/parser": "^3.1.0",
+    "eslint": "^7.1.0",
     "lab-transform-typescript": "^3.0.1",
     "nodemon": "^2.0.4",
     "typescript": "^3.9.3"

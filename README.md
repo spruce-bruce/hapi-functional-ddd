@@ -23,9 +23,9 @@ The system is divided into layers. Lower layers do not know about higher layers.
 ```
 /src
     /api            # the api layer contains route defitions and maps REST commands to domain function calls
-    /domain         # The domain layer contains all domain functions and objects and knows 
+    /domain         # The domain layer contains all domain functions and objects and knows
                     # nothing about the api layer
-    /infrastructure # The infrastructure layer contains system functions and objects that 
+    /infrastructure # The infrastructure layer contains system functions and objects that
                     # coordinate persistence and other infrastrucutre activities. Data models live here.
 ```
 
@@ -44,3 +44,7 @@ The functional paradigm aggressively promotes pure functions and loose coupling.
 
 ## Typescript
 The value of having types is well discussed and argued in the world of computer science, but the expressiveness of types has an additional benefit in a DDD environment. Being able to declare that a function requires a `PurchaseOrder` as an argument or a `RiskAssessment` object has extreme communicative value in a model and in the code that implements that model.
+
+## Linting
+recommended eslint rules: https://eslint.org/docs/rules/
+ts recommended: https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin#supported-rules
