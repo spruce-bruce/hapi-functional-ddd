@@ -1,5 +1,6 @@
-const { composeP } = require('ramda');
-const store = require('../../infrastructure/store');
+const store = require('../../infrastructure/store')
+
+import { composeP } from 'ramda';
 import persist from '../../infrastructure/persist';
 import { Product } from './createProduct';
 

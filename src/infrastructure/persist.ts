@@ -1,4 +1,4 @@
-import { captureRejectionSymbol } from "events";
+import { v4 } from "uuid/interfaces";
 
 const store = require('./store');
 
@@ -7,7 +7,7 @@ interface PromisePredicate<T=any> {
 }
 
 interface SavableObject {
-  id?: number | string,
+  id?: number | string | v4,
 }
 
 const persist = (mapperName: string) => (shouldUpdatePredicate : PromisePredicate<SavableObject>) => (savableObject : SavableObject) => shouldUpdatePredicate(savableObject)
