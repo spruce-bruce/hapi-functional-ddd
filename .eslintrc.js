@@ -17,6 +17,10 @@ module.exports = {
     extends: [
       'plugin:@typescript-eslint/recommended',
       'plugin:@typescript-eslint/recommended-requiring-type-checking',
-    ]
+    ],
+    rules: {
+      '@typescript-eslint/explicit-module-boundary-types': 'off',
+      '@typescript-eslint/no-unused-vars': ['error', {ignoreRestSiblings: true}]
+    }
   }],
 };

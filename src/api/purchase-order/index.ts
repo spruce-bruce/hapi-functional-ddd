@@ -1,10 +1,11 @@
 import { Server } from "hapi";
+import purchaseOrderSaveRoute from './routes/purchase-order-save';
 
 const purchaseOrderPlugin = {
   name: 'purchase-order-plugin',
   version: '1.0.0',
-  register: async function (server: Server) {
-    server.route(require('./routes/purchase-order-save'));
+  register: function (server: Server) {
+    server.route(purchaseOrderSaveRoute);
   }
 };
 

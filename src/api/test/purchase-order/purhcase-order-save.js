@@ -33,15 +33,17 @@ describe('Routes', () => {
     });
 
     it('put is idempotent', async () => {
-      const productResource = { id: v4(), name: 'A name' };
+      const payload = { id: v4(), name: 'A name' };
       const res1 = await server.inject({
         method: 'put',
         url: '/purchase-orders',
+        payload,
       });
 
       const res2 = await server.inject({
         method: 'put',
         url: '/purchase-orders',
+        payload,
       });
 
       expect(res1.statusCode).to.equal(res2.statusCode);

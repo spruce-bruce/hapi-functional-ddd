@@ -4,7 +4,7 @@ import { createPurchaseOrder, PurchaseOrder } from '../../../domain/purchase-ord
 import liftP from '../../../utility/liftP';
 import { composeP } from 'ramda';
 
-module.exports = {
+const purchaseOrderSaveRoute = {
   method: 'put',
   path: '/purchase-orders',
   handler: async (request: Request) => composeP(
@@ -20,4 +20,6 @@ module.exports = {
       }),
     }
   }
-}
+};
+
+export default purchaseOrderSaveRoute;

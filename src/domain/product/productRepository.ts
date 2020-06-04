@@ -1,10 +1,10 @@
-const store = require('../../infrastructure/store')
+import store from '../../infrastructure/store';
 
 import { composeP } from 'ramda';
 import persist from '../../infrastructure/persist';
 import { Product } from './createProduct';
 
-exports.get = async (productId: string) => {
+export const get = (productId: string) => {
   return store.find('products', productId);
 };
 
@@ -12,9 +12,9 @@ exports.get = async (productId: string) => {
 const mapProductToDb = ({ toString, ...product } : Product) => Promise.resolve(product);
 const persistProduct = persist('products');
 
-exports.add = async (product: Product) : Promise<Product> => {
+export const add = async (product: Product) : Promise<Product> => {
   await composeP(
-    persistProduct( savableProduct  => exports.get(savableProduct.id).then((product: Product) => !!product) ),
+    persistProduct( savableProduct  => get(savableProduct.id).then((product: Product) => !!product) ),
     mapProductToDb
   )(product);
   return product;
