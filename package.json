@@ -16,6 +16,7 @@
     "@hapi/inert": "^6.0.1",
     "@hapi/joi": "^17.1.1",
     "@hapi/vision": "^6.0.0",
+    "dinero.js": "^1.8.1",
     "hapi-swagger": "^13.0.1",
     "haute-couture": "^3.5.0",
     "js-data": "3.0.2",
@@ -27,6 +28,7 @@
   "devDependencies": {
     "@hapi/code": "^8.0.1",
     "@hapi/lab": "^22.0.4",
+    "@types/dinero.js": "^1.6.4",
     "@types/hapi": "^18.0.3",
     "@types/hapi__joi": "^17.1.0",
     "@types/node": "^14.0.5",

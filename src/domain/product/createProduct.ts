@@ -1,17 +1,22 @@
-import { v4 } from "uuid/interfaces";
+import { v4 } from 'uuid';
+import Dinero from 'dinero.js';
 
 type Product = {
-  id: v4,
+  id: ReturnType<typeof v4>,
   name: string,
+  price: Dinero.Dinero,
   toString: () => string
 }
 export type { Product };
 
-//TODO: learn about partials
-//use type to define type
-const createProduct = ({ id, name,} : { id: v4, name: string}) : Product => ({
+const createProduct = ({
+  id = v4(),
+  name = '',
+  price = { amount: 0, currency: 'USD'} as Dinero.Options
+}) : Product => ({
   id,
   name,
+  price: Dinero(price),
 
   toString: () => JSON.stringify({ id, name })
 });

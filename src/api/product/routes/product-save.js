@@ -11,7 +11,7 @@ module.exports = {
   handler: async (request) => composeP(
     liftP(mapProductToResource),
     persistProduct,
-    liftP(createProduct)
+    liftP(createProduct),
   )(request.payload),
   options: {
     tags: ['api'],

@@ -28,7 +28,12 @@ describe('Routes', () => {
         payload,
       });
       expect(res.statusCode).to.equal(200);
-      expect(JSON.parse(res.payload)).to.equal({ product: payload });
+      expect(JSON.parse(res.payload)).to.equal({
+        product: {
+          ...payload,
+          price: { amount: 0, currency: 'USD', precision: 2 },
+        }
+      });
     });
 
     it('put is idempotent', async () => {
