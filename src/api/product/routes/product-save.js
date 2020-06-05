@@ -11,10 +11,6 @@ module.exports = {
   handler: async (request) => composeP(
     liftP(mapProductToResource),
     persistProduct,
-    liftP(product => {
-      console.log({message: 'here', product});
-      return product;
-    }),
     liftP(createProduct),
   )(request.payload),
   options: {

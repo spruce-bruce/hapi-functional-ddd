@@ -17,8 +17,6 @@ const createProduct = ({
   id,
   name,
   price: Dinero(price),
-
-  toString: () => JSON.stringify({ id, name })
 });
 
 module.exports = createProduct;
