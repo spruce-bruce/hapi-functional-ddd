@@ -1,17 +1,16 @@
 const Joi = require('@hapi/joi');
 const { createProduct, persistProduct } = require('../../../domain/product');
-const liftP = require('../../../utility/liftP');
-const { composeP } = require('ramda');
+const { andThen, pipe } = require('ramda');
 
 const mapProductToResource = product => ({ product });
 
 module.exports = {
   method: 'put',
   path: '/products',
-  handler: async (request) => composeP(
-    liftP(mapProductToResource),
+  handler: request => pipe(
+    createProduct,
     persistProduct,
-    liftP(createProduct),
+    andThen(mapProductToResource)
   )(request.payload),
   options: {
     tags: ['api'],

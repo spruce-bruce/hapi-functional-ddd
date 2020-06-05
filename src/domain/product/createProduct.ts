@@ -5,7 +5,6 @@ type Product = {
   id: ReturnType<typeof v4>,
   name: string,
   price: Dinero.Dinero,
-  toString: () => string
 }
 export type { Product };
 

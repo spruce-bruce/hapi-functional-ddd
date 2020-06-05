@@ -1,17 +1,17 @@
-import { v4 } from "uuid/interfaces";
+import { v4 } from 'uuid';
 
 type PurchaseOrder = {
-  id: v4,
-  PONumber?: v4,
-  toString: () => string
+  id: ReturnType<typeof v4>,
+  PONumber?: ReturnType<typeof v4>,
 }
 export type { PurchaseOrder };
 
-const createPurchaseOrder = ({ id, PONumber} : Omit<PurchaseOrder, 'toString'>) : PurchaseOrder => ({
+const createPurchaseOrder = ({
+  id = v4(),
+  PONumber = v4()
+}) : PurchaseOrder => ({
   id,
   PONumber,
-
-  toString: () => JSON.stringify({ id, PONumber })
 });
 
 export default createPurchaseOrder;
