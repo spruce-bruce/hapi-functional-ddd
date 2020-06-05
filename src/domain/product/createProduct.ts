@@ -12,10 +12,10 @@ const createProduct = ({
   id = v4(),
   name = '',
   price = { amount: 0, currency: 'USD'} as Dinero.Options
-}) : Product => ({
+} = {}) : Product => ({
   id,
   name,
   price: Dinero(price),
 });
 
-module.exports = createProduct;
+export default createProduct;

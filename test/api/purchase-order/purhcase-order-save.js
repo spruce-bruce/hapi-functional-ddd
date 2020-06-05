@@ -1,7 +1,7 @@
 const Lab = require('@hapi/lab');
 const { expect } = require('@hapi/code');
 const { afterEach, before, beforeEach, describe, it } = exports.lab = Lab.script();
-const { init, register, createServer } = require('../../../../lib/server');
+const { init, register, createServer } = require('../../../lib/server');
 const { v4 } = require('uuid');
 
 describe('Routes', () => {

@@ -8,8 +8,8 @@
     "start": "nodemon index.js",
     "knex": "knex --knexfile database/knexfile.js",
     "lint": "eslint '*/**/*.{js,ts}'",
-    "test": "lab -v --sourcemaps --transform node_modules/lab-transform-typescript src/api/test",
-    "test:watch": "nodemon -e js,ts -x lab --sourcemaps --transform node_modules/lab-transform-typescript src/api/test"
+    "test": "lab -v --sourcemaps --transform node_modules/lab-transform-typescript",
+    "test:watch": "nodemon -e js,ts -x lab --sourcemaps --transform node_modules/lab-transform-typescript"
   },
   "dependencies": {
     "@hapi/hapi": "^19.1.1",
