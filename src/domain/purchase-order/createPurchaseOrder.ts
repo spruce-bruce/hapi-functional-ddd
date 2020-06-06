@@ -1,5 +1,5 @@
 import { v4 } from 'uuid';
-import  { PurchaseOrderProduct } from './createPurchaseOrderProduct';
+import  { PurchaseOrderProduct } from './createPOProduct';
 
 type PurchaseOrder = {
   id: ReturnType<typeof v4>,

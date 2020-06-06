@@ -4,7 +4,7 @@ import { v4 } from 'uuid';
 import { times } from 'ramda';
 
 import createPurchaseOrder from '../../../src/domain/purchase-order/createPurchaseOrder';
-import createPurchaseOrderProduct from '../../../src/domain/purchase-order/createPurchaseOrderProduct';
+import createPOProduct from '../../../src/domain/purchase-order/createPOProduct';
 
 const lab = Lab.script();
 const { describe, it } = lab;
@@ -32,7 +32,7 @@ describe('Unit:', () => {
     });
 
     it('can be created with products', () => {
-      const props = { products: times(() => createPurchaseOrderProduct(), 5) };
+      const props = { products: times(() => createPOProduct(), 5) };
       const purchaseOrder = createPurchaseOrder(props);
       purchaseOrder.products.forEach(
         (purchaseOrderProduct, i) => expect(purchaseOrderProduct.name).to.equal(props.products[i].name)
