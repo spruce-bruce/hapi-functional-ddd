@@ -2286,15 +2286,10 @@ js-data-sql@^1.0.1:
     lodash.snakecase "4.1.1"
     lodash.tostring "4.1.4"
 
-js-data@3.0.2:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/js-data/-/js-data-3.0.2.tgz#e5bf347a056a7cc008c83e1e350eb5209625ddda"
-  integrity sha512-imTiMHBpD6oFEgtV3xS1pXIxCw3IHiRvkez2eUcqPfE4GHooW+daMq+U/hNO4pFHf/SB56aoXquC/hzq2qqyHg==
-
-"js-data@>= 3.0.0", js-data@>=3.0.0:
-  version "3.0.8"
-  resolved "https://registry.yarnpkg.com/js-data/-/js-data-3.0.8.tgz#267fbc5bfda9db0e77f6fd063be7be521adcc4d4"
-  integrity sha512-1Buf2CyNA5q98+/krTiTXiBBOK7eWF/dnDk8lUeP2XDVxkN8kkWIN9Q+5KqGQyJ/izjB6tRudF9vWFBsvIFakA==
+js-data@3.0.11, "js-data@>= 3.0.0", js-data@>=3.0.0:
+  version "3.0.11"
+  resolved "https://registry.yarnpkg.com/js-data/-/js-data-3.0.11.tgz#2bbca273342de9fc6671daf234a91e5bffda22a0"
+  integrity sha512-eO/lHxYky17f6kM1vJXF62uudqpZ5IvEynJPvGsYk9ayZSMAhhmeaJqv99zgYv0dRXCFs0wJGugo0cYbFqy4zg==
 
 js-tokens@^4.0.0:
   version "4.0.0"
