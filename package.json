@@ -19,7 +19,7 @@
     "dinero.js": "^1.8.1",
     "hapi-swagger": "^13.0.1",
     "haute-couture": "^3.5.0",
-    "js-data": "3.0.2",
+    "js-data": "3.0.11",
     "js-data-sql": "^1.0.1",
     "pg": "^8.2.1",
     "ramda": "^0.27.0",
